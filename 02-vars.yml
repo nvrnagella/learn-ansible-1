@@ -7,3 +7,8 @@
     - name: access a variable
       ansible.builtin.debug:
         msg: URL == {{URL}}
+    - name: accessing variable from task level
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+      vars:
+        URL: play.examplet.com
