@@ -11,4 +11,13 @@
       ansible.builtin.debug:
         msg: URL == {{URL}}
       vars:
-        URL: play.examplet.com
+        URL: task.example.com
+- name: accessing variable from another file
+  hosts: all
+  connection: local
+  vars_files:
+    - var.yml
+  tasks:
+    - name: accessing variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
