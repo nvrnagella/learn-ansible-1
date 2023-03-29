@@ -1,0 +1,7 @@
+- name: demo on conditions
+  hosts: all
+  tasks:
+    - name: string conditions
+      debug:
+        msg: fruit name is apple
+      when: fruit_name == "apple"
