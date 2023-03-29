@@ -9,3 +9,10 @@
         - apple
         - banana
         - grape
+    - name: loops on maps
+      ansible.builtin.debug:
+        msg: fruit name is {{item.name}}, and fruit quantity is {{item.quantity}}
+      loop:
+        - { name: "apple", quantity: 100 }
+        - { name: "pine apple", quantity: 200 }
+        - { name: "banana", quantity: 300 }
