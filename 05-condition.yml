@@ -1,5 +1,6 @@
 - name: demo on conditions
   hosts: all
+  connection: local
   tasks:
     - name: string conditions
       debug:
